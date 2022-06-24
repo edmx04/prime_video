@@ -1,0 +1,527 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: #fff;
+   transition: all 0.3s;
+}
+
+body {
+   background-color: #0f171e;
+}
+
+html {
+   font-family: "Source Sans Pro", sans-serif;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+/* display flex alinean centro */
+.flex {
+   display: flex;
+   align-items: center;
+}
+
+/* header */
+#header {
+   justify-content: space-between;
+   padding: 1.1rem 3rem;
+   background-color: #192733;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 99999;
+   width: 100%;
+}
+
+#header #logo img {
+   display: inline-block;
+   width: 120px;
+   margin-right: 1.2rem;
+}
+
+#header #logo img:hover {
+   cursor: pointer;
+}
+
+#header #nav_principal {
+   flex-grow: 2;
+}
+
+#header #nav_principal .navegacion {
+   font-size: 1.2rem;
+}
+
+#header #nav_principal .navegacion a {
+   margin-right: 1rem;
+}
+
+#header #nav_principal .navegacion .activo {
+   border-bottom: 1px solid #fff;
+}
+
+/* arreglar */
+#header #nav_principal .navegacion a span {
+   color: #fff;
+   font-size: 1.2rem;
+}
+
+/* explorar en medida tablet y cellphone*/
+#explorar {
+   display: none;
+}
+
+#explorar .nav_explorar a {
+   font-size: 1.2rem;
+   color: rgb(201, 201, 201);
+}
+
+/* arreglar  */
+#explorar .nav_explorar span {
+   font-size: 1.2rem;
+   color: rgb(201, 201, 201);
+}
+
+/* navegacion login */
+
+#header #nav_login {
+   justify-content: space-between;
+   align-items: center;
+}
+
+#header #nav_login li {
+   margin-right: 1rem;
+}
+
+#header #nav_login .usuario {
+   display: inline-block;
+   width: 35px;
+}
+
+#header #nav_login a {
+   font-size: 1.1rem;
+   color: rgb(201, 201, 201);
+}
+
+#header #nav_login a span {
+   font-size: 2rem;
+   color: rgb(201, 201, 201);
+}
+
+/* arreglar */
+#header #nav_login a #dropdown {
+   color: rgb(201, 201, 201);
+   font-size: 1.2rem;
+}
+
+/* banner */
+
+main {
+   margin-top: 110px;
+}
+
+#banner {
+   position: relative;
+}
+
+#banner #banner_contenedor img {
+   display: block;
+   margin: 0 auto;
+   max-width: 90%;
+   height: 100%;
+   height: auto;
+}
+#banner #circulos {
+   position: absolute;
+   top: 88%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+#banner #circulos .circulo {
+   background-color: rgba(255, 255, 255, 0.4);
+   width: 0.8rem;
+   height: 0.8rem;
+   z-index: 999;
+   border-radius: 50%;
+   margin-right: 0.5rem;
+}
+
+#banner #circulos .circulo:hover {
+   cursor: pointer;
+}
+
+#banner #circulos .circulo:first-child {
+   background-color: rgba(255, 255, 255, 1);
+}
+
+/* carrusel de peliculas */
+#carrusel {
+   padding: 1.1rem 3rem;
+}
+
+#carrusel h2 {
+   font-size: 1.3rem;
+   margin: 0.6rem 0;
+}
+#carrusel h2 span {
+   color: #1085c9;
+   font-size: 1.6rem;
+   padding-right: 0.3rem;
+}
+
+#carrusel .carrusel-img {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 0.4rem;
+}
+#carrusel .carrusel-img img {
+   display: inline-block;
+   width: 100%;
+   border-radius: 2px;
+   margin: 0 auto;
+}
+
+#carrusel .carrusel-img .pelicula {
+   position: relative;
+   text-align: center;
+}
+
+#carrusel .carrusel-img .pelicula:hover {
+   transform: scale(1.2, 1.2);
+   z-index: 999;
+   border: 1px #1085c9 solid;
+   border-radius: 3px;
+}
+
+/* ocultar informacion texto
+ display none
+
+#carrusel .carrusel-img .pelicula .hide {
+   display: none;
+}
+
+#carrusel .carrusel-img .pelicula .hide .reproducir {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding-top: 1rem;
+}
+
+#carrusel .carrusel-img .pelicula .hide .reproducir span {
+   margin-right: 0.8rem;
+   font-size: 2rem;
+}
+
+#carrusel .carrusel-img .pelicula .hide .reproducir p {
+   flex-grow: 2;
+   font-size: 1.2rem;
+   text-align: left;
+}
+
+#carrusel .carrusel-img .pelicula .hide .texto_pelicula {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+#carrusel .carrusel-img .pelicula .hide .texto_pelicula h3 {
+   font-size: 1.1rem;
+   color: #1085c9;
+   padding: 1rem;
+}
+#carrusel .carrusel-img .pelicula .hide .texto_pelicula h4 {
+   font-size: 1.2rem;
+   padding-left: 1rem;
+   padding-bottom: 0.5rem;
+}
+
+#carrusel .carrusel-img .pelicula .hide .texto_pelicula p {
+   font-size: 0.9rem;
+   text-align: left;
+   width: 75%;
+   padding-left: 1rem;
+}
+
+#carrusel .carrusel-img .pelicula .hide .info_pelicula {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 2rem;
+   font-size: 1.1rem;
+   padding: 1rem;
+}
+fin estilos card */
+#carrusel .carrusel-img .pelicula #prime_chico {
+   position: absolute;
+   top: -4px;
+   left: 0px;
+   background-color: #1085c9;
+   color: #0f171e;
+   font-size: 0.8rem;
+   font-weight: 700;
+   border: 4px solid #0f171e;
+   border-left: none;
+   padding: 0.2rem 0.5rem;
+   border-top-right-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+}
+
+/* seccion video */
+
+#video {
+   padding: 1.1rem 2rem 1.1rem 6rem;
+   background: url("../img/fondo_video.jpg") center center/cover no-repeat;
+   min-height: 450px;
+   width: 100%;
+   margin-top: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   position: relative;
+}
+
+#video .overlay {
+   width: 100%;
+   height: 100%;
+   background: rgb(15, 23, 30);
+   background: linear-gradient(90deg, rgba(15, 23, 30, 1) 30%, rgba(222, 24, 24, 0) 100%);
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+#video .titulo_video {
+   flex-grow: 4;
+   z-index: 1;
+}
+
+#video h2 {
+   color: #1085c9;
+   font-size: 1.6rem;
+   padding-right: 0.3rem;
+}
+
+#video h3 {
+   font-size: 2.2rem;
+}
+
+#video .pelicula_info {
+   z-index: 1;
+}
+
+#video .pelicula_info p {
+   font-size: 1.1rem;
+   margin: 2rem 0;
+}
+
+#video .pelicula_info p span {
+   padding: 0 0.4rem;
+   border: 1px solid #555;
+   margin-left: 0.5rem;
+   color: #555;
+   border-radius: 2px;
+}
+.botones {
+   display: flex;
+   align-items: center;
+   color: #fff;
+   background-color: #1085c9;
+   padding: 0.5rem 1rem;
+   font-size: 1rem;
+   width: 220px;
+   justify-content: center;
+   border-radius: 30px;
+   cursor: pointer;
+   z-index: 1;
+}
+
+.botones:hover {
+   background-color: #0f96e4;
+}
+
+.botones span {
+   margin-right: 0.5rem;
+   font-size: 36px;
+}
+
+/* footer */
+footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+footer ul {
+   display: flex;
+}
+
+footer ul li {
+   font-size: 1rem;
+   margin-right: 1rem;
+   margin-bottom: 2rem;
+}
+
+footer ul a {
+   color: #1085c9;
+}
+
+footer .logo img {
+   width: 100px;
+   display: inline-block;
+   margin: 1rem 0 0;
+}
+
+/* media */
+
+@media screen and (max-width: 1040px) {
+   #explorar {
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 2;
+   }
+
+   #header #nav_principal {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 879px) {
+   #banner #banner_contenedor img {
+      max-width: 100%;
+   }
+
+   #explorar {
+      display: flex;
+      justify-content: flex-start;
+      flex-grow: 2;
+   }
+}
+
+/* pantalla menor a 449px */
+
+@media screen and (max-width: 449px) {
+   #header {
+      padding: 1rem;
+   }
+   #header #logo img {
+      width: 100px;
+   }
+
+   #banner #circulos {
+      top: 85%;
+   }
+
+   #banner #circulos .circulo {
+      width: 0.5rem;
+      height: 0.5rem;
+      z-index: 999;
+   }
+
+   #header #nav_login .flex li:last-child {
+      display: none;
+   }
+
+   #carrusel .carrusel-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.4rem;
+   }
+
+   #video {
+      padding: 1.1rem 2rem 1.1rem 2rem;
+      background: url("../img/fondo_video.jpg") center center/cover no-repeat;
+      min-height: 450px;
+      width: 100%;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      text-align: center;
+   }
+
+   #video .overlay {
+      width: 100%;
+      height: 100%;
+      background: rgb(15, 23, 30);
+      background: linear-gradient(90deg, rgba(15, 23, 30, 1) 30%, rgba(222, 24, 24, 0) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+
+   #video .titulo_video {
+      flex-grow: 4;
+      z-index: 1;
+   }
+
+   #video h2 {
+      color: #1085c9;
+      font-size: 1.2rem;
+      padding-right: 0.3rem;
+   }
+
+   #video h3 {
+      font-size: 1.4rem;
+   }
+
+   #video .pelicula_info {
+      z-index: 1;
+   }
+
+   #video .pelicula_info p {
+      font-size: 0.9rem;
+      margin: 2rem 0;
+   }
+
+   #video .pelicula_info p span {
+      padding: 0 0.1rem;
+      border: 1px solid rgb(206, 206, 206);
+      margin-left: 0.1rem;
+      color: rgb(206, 206, 206);
+      border-radius: 2px;
+   }
+   .botones {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background-color: #1085c9;
+      padding: 0.2rem 0.4rem;
+      font-size: 0.7rem;
+      width: 150px;
+      justify-content: center;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 1;
+   }
+
+   .botones:hover {
+      background-color: #0f96e4;
+   }
+
+   .botones span {
+      margin-right: 0.5rem;
+      font-size: 36px;
+   }
+
+   footer nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   footer nav ul li {
+      margin: 0.3rem 0;
+   }
+}
